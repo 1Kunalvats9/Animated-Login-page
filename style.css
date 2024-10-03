@@ -9,18 +9,32 @@
  }
 
  body{
-    background-color: #fff;
-    background:linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-color: #cbcbcb;
+    background:linear-gradient(to right, #e2e2e2, #b9b9bc);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height:100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.8s, opacity 0.8s ease-in-out; 
+    animation: fadeInUp 1.5s ease forwards;
  }
+ @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start position */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); /* End position */
+    }
+}
  .container{
     background-color: #fff;
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.35)
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
     position: relative;
     overflow: hidden;
     width: 768px;
@@ -163,7 +177,7 @@
 .toggle{
     background-color: #1e1d1e;
     height: 100%;
-    background: linear-gradient(to right,  #252525, #0f0f0f);
+    background: linear-gradient(to right, #252525, #0f0f0f);
     color: #fff;
     position: relative;
     left: -100%;
@@ -208,3 +222,11 @@
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+@keyframes fadeIn{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
