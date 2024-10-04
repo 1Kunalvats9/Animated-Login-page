@@ -37,9 +37,9 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.35);
     position: relative;
     overflow: hidden;
-    width: 45%;
+    width: 100%;
     max-width: 100%;
-    height: 50%;
+    height: 45%;
 }
 .container p{
     font-size: 14px;
